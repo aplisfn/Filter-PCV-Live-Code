@@ -2,6 +2,8 @@
 Code filter pertemuan mata kuliah PCV
 ## Fitur
 
+(Filter warna merah)
+
 Program ini memiliki beberapa fungsi:
 
 - Membaca file gambar menggunakan OpenCV
