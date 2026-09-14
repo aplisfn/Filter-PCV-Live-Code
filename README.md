@@ -21,9 +21,11 @@ Library yang digunakan:
 - Python
 - OpenCV
 
+## NB :
+Tekan tombol **ESC** untuk keluar dari program saat webcam sedang berjalan.
+
+
 Install OpenCV dengan:
 
 ```bash
 pip install opencv-python
-
-> **NB:** Tekan tombol **ESC** untuk keluar dari program saat webcam sedang berjalan.
