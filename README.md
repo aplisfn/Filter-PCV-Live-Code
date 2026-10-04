@@ -1,4 +1,10 @@
-# Filter-PCV-Live-Code
+Repositori ini berisi file tugas mata kuliah PCV
+
+1. # Filter-PCV-Live-Code
+
+## File name : 
+- intro.py
+- Gambar.png
 
 Code filter warna untuk pertemuan mata kuliah Pengolahan Citra dan Visi (PCV).
 
