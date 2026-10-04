@@ -156,9 +156,7 @@ pip install opencv-python numpy
 
 ```text
 PCV/
-├── 1-Intro.py
-├── 2-ti-eq.py
-├── 3-filter-spasial.py
+├── filter-spasial.py
 ├── gambar.jpg
 └── README.md
 ```
