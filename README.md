@@ -122,7 +122,7 @@ Menghitung histogram dan distribusi kumulatif (*Cumulative Distribution Function
 * Program tidak menggunakan fungsi bawaan OpenCV untuk melakukan transformasi tersebut.
 * Gambar asli ditampilkan dalam format berwarna, sedangkan hasil transformasi ditampilkan dalam grayscale.
 
-# 3. # Spatial Filtering 
+# 3. Spatial Filtering 
 
 Program ini merupakan implementasi filter spasial pada citra digital menggunakan Python, OpenCV, dan NumPy. Filter spasial digunakan untuk menghaluskan citra, mengurangi noise, mempertajam detail, dan mendeteksi tepi.
 
@@ -209,9 +209,6 @@ Mendeteksi tepi dengan menghitung gradien intensitas dalam arah horizontal dan v
 * Ukuran kernel memengaruhi tingkat penghalusan dan detail yang dihasilkan.
 * Hasil setiap filter ditampilkan secara berurutan agar dapat dibandingkan dengan citra asli.
 
-## Author
-
-Alvis
 
 
 
