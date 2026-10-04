@@ -36,7 +36,7 @@ Install OpenCV dengan:
 ```bash
 pip install opencv-python
 ```
-# 2. Transformasi Intensitas dan Ekualisasi Histogram - PCV
+# 2. Transformasi Intensitas dan Ekualisasi Histogram 
 
 Repository ini berisi implementasi transformasi intensitas dan ekualisasi histogram menggunakan Python dan OpenCV untuk tugas praktikum Pengolahan Citra dan Visi Komputer (PCV).
 
@@ -122,6 +122,96 @@ Menghitung histogram dan distribusi kumulatif (*Cumulative Distribution Function
 * Program tidak menggunakan fungsi bawaan OpenCV untuk melakukan transformasi tersebut.
 * Gambar asli ditampilkan dalam format berwarna, sedangkan hasil transformasi ditampilkan dalam grayscale.
 
+# 3. # Spatial Filtering 
+
+Program ini merupakan implementasi filter spasial pada citra digital menggunakan Python, OpenCV, dan NumPy. Filter spasial digunakan untuk menghaluskan citra, mengurangi noise, mempertajam detail, dan mendeteksi tepi.
+
+## Fitur
+
+* Membaca dan menampilkan citra asli berwarna.
+* Mengubah citra berwarna menjadi grayscale.
+* Menerapkan Box Filter.
+* Menerapkan Gaussian Filter.
+* Menerapkan Median Filter.
+* Mendeteksi tepi menggunakan Laplacian.
+* Mempertajam citra menggunakan Unsharp Masking.
+* Mendeteksi tepi menggunakan Sobel.
+* Menampilkan hasil pemrosesan satu per satu.
+
+## Requirements
+
+Library yang digunakan:
+
+* Python
+* OpenCV
+* NumPy
+
+Instalasi library:
+
+```bash
+pip install opencv-python numpy
+```
+
+## Struktur Folder
+
+```text
+PCV/
+├── 1-Intro.py
+├── 2-ti-eq.py
+├── 3-filter-spasial.py
+├── gambar.jpg
+└── README.md
+```
+
+## Cara Menjalankan
+
+1. Pastikan file `gambar.jpg` berada di folder yang sama dengan program.
+2. Buka terminal pada folder tugas.
+3. Jalankan perintah berikut:
+
+```bash
+python 3-filter-spasial.py
+```
+
+4. Program akan menampilkan citra asli berwarna, citra grayscale, dan hasil setiap filter secara berurutan.
+5. Tutup jendela gambar atau tekan tombol keyboard untuk melanjutkan ke hasil berikutnya.
+
+## Metode yang Digunakan
+
+### 1. Box Filter
+
+Menghaluskan citra dengan mengganti nilai setiap piksel menggunakan rata-rata piksel di sekitarnya. Pada program ini digunakan kernel berukuran 9 × 9.
+
+### 2. Gaussian Filter
+
+Menghaluskan citra menggunakan distribusi Gaussian sehingga piksel yang lebih dekat dengan pusat kernel memiliki bobot lebih besar.
+
+### 3. Median Filter
+
+Mengurangi noise dengan mengganti nilai piksel menggunakan median dari lingkungan sekitarnya.
+
+### 4. Laplacian Filter
+
+Mendeteksi perubahan intensitas piksel untuk menonjolkan tepi dan detail citra. Hasil yang ditampilkan berupa respons tepi dalam skala grayscale.
+
+### 5. Unsharp Masking
+
+Mempertajam citra dengan menambahkan detail yang diperoleh dari selisih citra asli dan citra yang telah dihaluskan.
+
+### 6. Sobel Filter
+
+Mendeteksi tepi dengan menghitung gradien intensitas dalam arah horizontal dan vertikal, kemudian menggabungkan keduanya untuk menghasilkan magnitudo gradien.
+
+## Catatan
+
+* Citra asli ditampilkan dalam format berwarna.
+* Proses filtering dilakukan pada citra grayscale.
+* Ukuran kernel memengaruhi tingkat penghalusan dan detail yang dihasilkan.
+* Hasil setiap filter ditampilkan secara berurutan agar dapat dibandingkan dengan citra asli.
+
+## Author
+
+Alvis
 
 
 
