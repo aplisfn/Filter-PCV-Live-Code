@@ -207,6 +207,160 @@ Mendeteksi tepi dengan menghitung gradien intensitas dalam arah horizontal dan v
 * Ukuran kernel memengaruhi tingkat penghalusan dan detail yang dihasilkan.
 * Hasil setiap filter ditampilkan secara berurutan agar dapat dibandingkan dengan citra asli.
 
+# 4. Model Warna
+
+Program ini merupakan implementasi konversi model warna menggunakan Python, OpenCV, dan NumPy. Konversi model warna dilakukan untuk mempelajari representasi warna dalam beberapa ruang warna, yaitu RGB, CMYK, HSI, dan HSV.
+
+## Fitur
+
+* Membaca dan menampilkan gambar asli berwarna.
+* Memisahkan komponen warna RGB (Red, Green, Blue).
+* Mengonversi RGB menjadi CMYK (Cyan, Magenta, Yellow, Black).
+* Mengonversi RGB menjadi HSI (Hue, Saturation, Intensity).
+* Mengonversi RGB menjadi HSV (Hue, Saturation, Value).
+* Menampilkan setiap komponen model warna secara terpisah.
+* Menampilkan hasil konversi satu per satu.
+
+## Requirements
+
+Library yang digunakan:
+
+* Python
+* OpenCV
+* NumPy
+
+Instalasi library:
+
+```bash
+pip install opencv-python numpy
+```
+
+## Struktur Folder
+
+```text
+PCV/
+├── 4-model-warna.py
+├── gambar.jpg
+└── README.md
+```
+
+## Cara Menjalankan
+
+1. Pastikan file `gambar.jpg` berada di folder yang sama dengan `4-model-warna.py`.
+2. Buka terminal pada folder tugas.
+3. Jalankan perintah berikut:
+
+```bash
+python 4-model-warna.py
+```
+
+4. Program akan menampilkan gambar asli dan setiap komponen model warna secara berurutan.
+5. Tutup jendela gambar atau tekan tombol keyboard untuk melanjutkan ke hasil berikutnya.
+
+## Metode yang Digunakan
+
+### 1. RGB (Red, Green, Blue)
+
+Model warna yang menggunakan tiga komponen utama, yaitu merah, hijau, dan biru. RGB merupakan model warna aditif yang menggabungkan ketiga warna untuk menghasilkan berbagai warna lainnya.
+
+### 2. CMYK (Cyan, Magenta, Yellow, Black)
+
+Model warna yang terdiri dari empat komponen, yaitu Cyan, Magenta, Yellow, dan Black. CMYK merupakan model warna subtraktif yang umum digunakan dalam proses pencetakan.
+
+### 3. HSI (Hue, Saturation, Intensity)
+
+Model warna yang memisahkan informasi warna menjadi tiga komponen. Hue menunjukkan jenis warna, Saturation menunjukkan tingkat kejenuhan warna, sedangkan Intensity menunjukkan intensitas atau kecerahan warna.
+
+### 4. HSV (Hue, Saturation, Value)
+
+Model warna yang terdiri dari Hue, Saturation, dan Value. Hue menunjukkan jenis warna, Saturation menunjukkan tingkat kejenuhan, sedangkan Value menunjukkan tingkat kecerahan warna.
+
+## Catatan
+
+* Gambar asli dibaca dalam format BGR dan dikonversi menjadi RGB sebelum proses konversi model warna.
+* Perhitungan komponen CMYK dan HSI dilakukan menggunakan rumus secara manual.
+* Konversi HSV menggunakan fungsi `cv2.cvtColor()` dari OpenCV.
+* Setiap komponen warna ditampilkan dalam bentuk citra grayscale untuk memperlihatkan distribusi nilai masing-masing kanal.
+
+---
+
+# 5. Morphological Operations
+
+Program ini merupakan implementasi operasi morfologi pada citra digital menggunakan Python, OpenCV, dan NumPy. Operasi morfologi digunakan untuk mengolah bentuk dan struktur objek pada citra berdasarkan elemen penstruktur (*structuring element*).
+
+## Fitur
+
+* Membaca dan menampilkan gambar asli berwarna.
+* Mengubah gambar menjadi grayscale.
+* Menerapkan operasi Erosi (Erosion).
+* Menerapkan operasi Dilasi (Dilation).
+* Menerapkan operasi Opening.
+* Menerapkan operasi Closing.
+* Menggunakan kernel berukuran 5 × 5 sebagai elemen penstruktur.
+* Menampilkan hasil operasi morfologi satu per satu.
+
+## Requirements
+
+Library yang digunakan:
+
+* Python
+* OpenCV
+* NumPy
+
+Instalasi library:
+
+```bash
+pip install opencv-python numpy
+```
+
+## Struktur Folder
+
+```text
+PCV/
+├── 5-morphology.py
+├── gambar.jpg
+└── README.md
+```
+
+## Cara Menjalankan
+
+1. Pastikan file `gambar.jpg` berada di folder yang sama dengan `5-morphology.py`.
+2. Buka terminal pada folder tugas.
+3. Jalankan perintah berikut:
+
+```bash
+python 5-morphology.py
+```
+
+4. Program akan menampilkan gambar asli berwarna, gambar grayscale, dan hasil setiap operasi morfologi secara berurutan.
+5. Tutup jendela gambar atau tekan tombol keyboard untuk melanjutkan ke hasil berikutnya.
+
+## Metode yang Digunakan
+
+### 1. Erosi (Erosion)
+
+Erosi merupakan operasi morfologi yang digunakan untuk memperkecil area objek yang memiliki intensitas lebih terang. Operasi ini dilakukan dengan mengambil nilai minimum dari area piksel sesuai dengan elemen penstruktur.
+
+### 2. Dilasi (Dilation)
+
+Dilasi merupakan operasi morfologi yang digunakan untuk memperbesar area objek yang memiliki intensitas lebih terang. Operasi ini dilakukan dengan mengambil nilai maksimum dari area piksel sesuai dengan elemen penstruktur.
+
+### 3. Opening
+
+Opening merupakan kombinasi operasi erosi yang dilanjutkan dengan dilasi. Operasi ini digunakan untuk menghilangkan noise atau objek kecil yang tidak diinginkan tanpa mengubah bentuk utama objek secara signifikan.
+
+### 4. Closing
+
+Closing merupakan kombinasi operasi dilasi yang dilanjutkan dengan erosi. Operasi ini digunakan untuk menutup lubang kecil dan celah pada objek dalam citra.
+
+## Catatan
+
+* Citra asli ditampilkan dalam format berwarna.
+* Proses operasi morfologi dilakukan pada citra grayscale.
+* Elemen penstruktur yang digunakan berupa kernel berukuran 5 × 5.
+* Setiap operasi menggunakan satu iterasi.
+* Hasil operasi ditampilkan secara berurutan agar perubahan bentuk objek dapat diamati dan dibandingkan dengan citra asli.
+
 
 
 
